@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en" class="main-app">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=8; IE=EDGE">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/main-blue.css" rel="stylesheet" type="text/css">
+        <title>Please Login</title>
+    </head>
+    <body>
+        <div class="view-container">
+            <form class="prompt" action="/remote/logincheck" method="post" name="f" autocomplete="off">
+                <div class="content with-header">
+                    <div class="header">
+                        <f-icon class="ftnt-fortinet-grid icon-xl"></f-icon>
+                        <div>Please Login</div>
+                    </div>
+                    <div class="sub-content">
+                        <div class="wide-inputs">
+                            <!--remoteauthtimeout=5-->
+<input type="text" name="username" id="username" placeholder="Name"><input type="password" name="credential" id="credential" placeholder="Password" maxlength="128"><div class="info-message" id="token_msg" style="display: none;"><div class="message-content" id="token_label"></div></div><input type="password" style="display: none;" maxlength="128" name="credential2" id="credential2"><input type="password" style="display: none;" maxlength="128" name="credential3" id="credential3"><div class="button-actions wide"><button class="primary" type="button" name="ftm_push_button" id="ftm_push_button" onclick="try_ftm_push()    " style="display: none" disabled>Use FTM Push</button></div><input type="password" style="display: none;" placeholder="FortiToken" name="code" id="code"><div id="driftmsg" style="display: none;" class="warning-message">FortiToken clock drift detected. Please input the next code and continue.</div><input type="password" style="display: none;" name="code2" id="code2" placeholder="Next FortiToken Code">
+                        </div>
+                        <div class="button-actions wide">
+                            <button class="primary" type="button" name="login_button" id="login_button" onClick="try_login()">
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+    <input type=hidden name="ftm_push_enabled" id="ftm_push_enabled" value="1"><input type=hidden name=just_logged_in value=1><input type=hidden name=magic id=magic_id value=""><input type=hidden name=reqid id=reqid_id value="0"><input type=hidden name=grpid id=grpid_id value=""><input type=hidden name=realm id=realm_id value=""><input type=hidden name=redir value="/sslvpn/portal.html"><script type="text/javascript" src="/sslvpn/js/login.js?q=21c3fe100a2d013451398d90da03831c"></script><script type="text/javascript" src="/remote/fgt_lang?lang=en"></script><script>document.onkeydown = key_pressdown;function load_login_strings() {var tmp = document.getElementById("err_val");if (tmp) {tmp.innerHTML = fgt_lang["error"] + ": " + fgt_lang[tmp.getAttribute('title')];}}window.onload = load_login_strings;</script>
+</html>
+
